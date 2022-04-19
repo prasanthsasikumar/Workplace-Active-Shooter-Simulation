@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a843d3ef6fb4b3f45a7bf295f2cf5ed1
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: d15e5ba9d7128e14aa3135777dcaa24c, type: 3}
+  scale: 1
+  recalculateNormalAngle: 0
+  normalAngle: 0
+  generateLightmapUV: 0
+  shadeFlat: 0
