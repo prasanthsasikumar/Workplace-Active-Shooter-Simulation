@@ -6,12 +6,12 @@ public class RecordPlayerMovement : MonoBehaviour
 {
     public bool isRecording = false, isPlaying = false, finishedRecording = false;
     public float timeInterval = 0.5f;
-    public string movementData;
-    public GameObject head, playbackHead;
+    public string movementData, terroristMovementData;
+    public GameObject head, terrorist, playbackHead;
 
-    public List<Transform> positions;
-    public List<Vector3> positionsVector;
-    public List<Quaternion> rotationsVector;
+    public List<Transform> positions, terroristPositions;
+    public List<Vector3> positionsVector, terroristPositionsVector;
+    public List<Quaternion> rotationsVector, terroristRotationVector;
     private float lastTimeframe = 0f;
     private bool readRecording = false, coroutineStarted = false;
 
@@ -19,6 +19,7 @@ public class RecordPlayerMovement : MonoBehaviour
     void Start()
     {
         positions = new List<Transform>();
+        terroristPositions = new List<Transform>();
     }
 
     // Update is called once per frame
@@ -28,6 +29,10 @@ public class RecordPlayerMovement : MonoBehaviour
         {
             positionsVector.Add(head.transform.position);
             rotationsVector.Add(head.transform.rotation);
+
+            terroristPositionsVector.Add(terrorist.transform.position);
+            terroristRotationVector.Add(terrorist.transform.rotation);
+
             lastTimeframe = Time.time;
         }
         if (finishedRecording)
@@ -35,6 +40,7 @@ public class RecordPlayerMovement : MonoBehaviour
             isRecording = false;
             finishedRecording = false;
             movementData = "";
+            terroristMovementData = "";
             WirteRecording();
         }
         if (isPlaying)
@@ -51,6 +57,12 @@ public class RecordPlayerMovement : MonoBehaviour
             movementData += positionsVector[i].ToString() + "," + rotationsVector[i].ToString() + "|";
         }
         this.GetComponent<CloudSaveScript>().SaveUserData();
+
+        for (int i = 0; i < terroristPositionsVector.Count; i++)
+        {
+            terroristMovementData += terroristPositionsVector[i].ToString() + "," + terroristRotationVector[i].ToString() + "|";
+        }
+        this.GetComponent<CloudSaveScript>().SaveTerroristData();
     }
 
     void ReadRecording()

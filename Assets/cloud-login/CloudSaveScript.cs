@@ -112,4 +112,9 @@ public class CloudSaveScript : MonoBehaviour
     {
         CloudLoginUser.CurrentUser.SetAttribute("UserData"+DateTime.Now, this.GetComponent<RecordPlayerMovement>().movementData);
     }
+
+    public void SaveTerroristData()
+    {
+        CloudLoginUser.CurrentUser.SetAttribute("TerroristData" + DateTime.Now, this.GetComponent<RecordPlayerMovement>().terroristMovementData);
+    }
 }
