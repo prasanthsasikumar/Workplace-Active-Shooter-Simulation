@@ -8,6 +8,10 @@ This project simulates pedestrian movement and crowd behavior during an active s
 
 Built with Unity and UModeler for rapid 3D prototyping.
 
+## Demo
+
+[![Workplace Active Shooter Simulation Demo](https://img.youtube.com/vi/2Kp9xkRHBYI/0.jpg)](https://youtu.be/2Kp9xkRHBYI)
+
 ## Publications
 
 - **PedestrianDynamics** -- Related work on pedestrian movement reconstruction and crowd simulation. [[Repo]](https://github.com/prasanthsasikumar/PedestrianDynamics)
