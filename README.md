@@ -1,6 +1,6 @@
-# Active Shooter Escape
+# Workplace-Active-Shooter-Simulation
 
-Unity-based active shooter escape simulation with pedestrian dynamics and enemy AI.
+Unity-based workplace active shooter simulation with pedestrian dynamics and enemy AI.
 
 ## Overview
 
