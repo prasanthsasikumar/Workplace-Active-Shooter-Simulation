@@ -8,14 +8,6 @@ This project simulates pedestrian movement and crowd behavior during an active s
 
 Built with Unity and UModeler for rapid 3D prototyping.
 
-![Demo](media/2019.gif)
-
-## Video Capture & Playback Evolution
-
-This project is part of a series exploring video capture and playback technologies across my PhD research:
-
-[![Video Capture Evolution](https://img.youtube.com/vi/Gq3fmMliaJI/0.jpg)](https://youtu.be/Gq3fmMliaJI)
-
 ## Publications
 
 - **PedestrianDynamics** -- Related work on pedestrian movement reconstruction and crowd simulation. [[Repo]](https://github.com/prasanthsasikumar/PedestrianDynamics)
